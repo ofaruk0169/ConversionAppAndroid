@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="mililitres">Milliliters</string>
+    <string name="calculate">Calculate</string>
+    <string name="switch_measurement">Switch Measurement</string>
+    <string name="fluid_ounce">fluid ounce</string>
+</resources>
