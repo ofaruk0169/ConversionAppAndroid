@@ -25,34 +25,34 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateConversion() {
         if (isSwitched) {
-            val stringInTextField = binding.fluidId.text.toString()
+            val stringInTextField = binding.fluidEditText.text.toString()
             val fluidOunceValue = stringInTextField.toDoubleOrNull()
             if (fluidOunceValue == null) {
-                binding.millilitersId.text = Editable.Factory.getInstance().newEditable("")
+                binding.millilitersEditText.text = Editable.Factory.getInstance().newEditable("")
                 return
             }
 
             if (fluidOunceValue !== null) {
                 val milliliters = fluidOunceValue * fluidOuncesToMilliliters
                 val millilitersText = milliliters.toString()
-                binding.millilitersId.text = Editable.Factory.getInstance().newEditable(millilitersText)
+                binding.millilitersEditText.text = Editable.Factory.getInstance().newEditable(millilitersText)
             } else {
-                binding.fluidId.text = Editable.Factory.getInstance().newEditable("Please enter a valid number of fluid ounces.")
+                binding.fluidEditText.text = Editable.Factory.getInstance().newEditable("Please enter a valid number of fluid ounces.")
             }
         } else {
-            val stringInTextField2 = binding.millilitersId.text.toString()
+            val stringInTextField2 = binding.millilitersEditText.text.toString()
             val millilitersValue = stringInTextField2.toDoubleOrNull()
             if (millilitersValue == null) {
-                binding.fluidId.text = Editable.Factory.getInstance().newEditable("")
+                binding.fluidEditText.text = Editable.Factory.getInstance().newEditable("")
                 return
             }
 
             if (millilitersValue != null) {
                 val fluidOunces = millilitersValue * millilitersToFluidOunces
                 val fluidOuncesText = fluidOunces.toString()
-                binding.fluidId.text = Editable.Factory.getInstance().newEditable(fluidOuncesText)
+                binding.fluidEditText.text = Editable.Factory.getInstance().newEditable(fluidOuncesText)
             } else {
-                binding.fluidId.text = Editable.Factory.getInstance().newEditable("Please enter a valid number of milliliters.")
+                binding.fluidEditText.text = Editable.Factory.getInstance().newEditable("Please enter a valid number of milliliters.")
             }
 
 

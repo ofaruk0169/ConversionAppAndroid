@@ -7,17 +7,25 @@
     tools:context=".MainActivity"
     android:padding="16dp">
 
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/milliliters_id"
         android:layout_width="101dp"
         android:layout_height="84dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="320dp"
         android:hint="@string/mililitres"
-        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/milliliters_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="TextContrastCheck"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:id="@+id/convertArrow"
@@ -28,10 +36,12 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrowtest"
-        tools:srcCompat="@drawable/arrowtest" />
+        app:srcCompat="@drawable/convert_arrow"
+        tools:srcCompat="@drawable/convert_arrow" />
 
-    <EditText
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fluid_id"
         android:layout_width="113dp"
         android:layout_height="71dp"
@@ -41,7 +51,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fluid_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="TextContrastCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/calculate_button"
